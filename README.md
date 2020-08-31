@@ -4,7 +4,7 @@ The project provides an Android library. It provides a webview based create prof
 
 ### Integration Guide:
 
-1. Copy and paste user-profile-sdk-release.aar file into the app>libs directory.
+1. Add "user-profile-sdk-release.aar" file into the app>libs directory. It is located in binary directory.
 2. In app Gradle file write this
 ````
 repositories {
@@ -13,6 +13,7 @@ repositories {
     }
 }
 dependencies {
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation (name: 'user-profile-sdk-release', ext:'aar')
 }
 ````

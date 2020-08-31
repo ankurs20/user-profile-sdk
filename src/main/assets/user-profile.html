@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+<a href="file:///mydomain.com/user-profile.html?takePhoto=true"><img id="imgProfile" src="camera.png" alt="Take Photo" width="100"
+     height="100">
+</a>
+<br><br>
+Name:  <input type="text" id="name"><br><br>
+Email:  <input type="text" id="email"><br><br>
+Mobile:  <input type="text" id="mobile" name="mobile"><br><br>
+
+
+<button onclick="submitAction()">Submit !</button>
+
+<script>
+	function submitAction(){
+	    var name = document.getElementById("name").value
+        var email = document.getElementById("email").value
+        var phone = document.getElementById("mobile").value
+        var n = "?name="+name+"&email="+email+"&mobile="+phone
+
+        document.location = "file:///mydomain.com/user-profile.html" + n
+    }
+</script>
+
+<script>
+
+    function setPhoto(base64Image){
+        var img = document.getElementById("imgProfile")
+        img.src = "data:image/bmp;base64," + base64Image
+    }
+
+</script>
+</body>
+</html>
